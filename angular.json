@@ -105,6 +105,37 @@
           }
         }
       }
+    },
+    "fox-box-ui": {
+      "projectType": "library",
+      "root": "projects/fox-box-ui",
+      "sourceRoot": "projects/fox-box-ui/src",
+      "prefix": "fox",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/fox-box-ui/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/fox-box-ui/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/fox-box-ui/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/fox-box-ui/src/test.ts",
+            "tsConfig": "projects/fox-box-ui/tsconfig.spec.json",
+            "karmaConfig": "projects/fox-box-ui/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "FoxBox-UI"
