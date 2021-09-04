@@ -8,8 +8,7 @@
     "strict": true,
     "noImplicitReturns": true,
     "paths": {
-      "fox-box-ui": [
-        "dist/fox-box-ui/fox-box-ui",
+      "@fo-ox/fox-box-ui": [
         "dist/fox-box-ui"
       ]
     },
