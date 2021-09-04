@@ -4,7 +4,7 @@
   "scripts": {
     "lib:build": "ng build fox-box-ui",
     "lib:watch": "ng build fox-box-ui --watch",
-    "lib:publish": "npm run lib:build && cd dist/test-lib && npm pack && npm publish"
+    "lib:publish": "npm run lib:build && cd dist/fox-box-ui && npm pack && npm publish"
   },
   "description": "Angular components library",
   "repository": "https://github.com/Fo-ox/FoxBox-UI",
