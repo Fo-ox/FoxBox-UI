@@ -1,6 +1,11 @@
 # FoxBoxUI
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.4.
+UI KIT 
+*/ develop in progress */ 🔋🔋🔋
+
+## NPM Install 
+
+Run `npm install fox-box-ui`
 
 ## Development server
 
