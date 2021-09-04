@@ -1,8 +1,17 @@
 {
   "name": "@fo-ox/fox-box-ui",
+  "author": "fo-ox",
   "version": "0.0.1",
   "description": "Angular components library",
-  "repository": "https://github.com/Fo-ox/FoxBox-UI",
+  "license": "MIT",
+  "scripts": {
+    "lib:build": "ng build fox-box-ui",
+    "lib:watch": "ng build fox-box-ui --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Fo-ox/FoxBox-UI"
+  },
   "homepage": "https://github.com/Fo-ox/FoxBox-UI",
   "peerDependencies": {
     "@angular/common": "^12.2.0",
