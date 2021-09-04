@@ -1,0 +1,134 @@
+{
+    "rulesDirectory": [
+        "codelyzer",
+        "rxjs-tslint-rules"
+    ],
+    "extends": [
+        "codelyzer",
+        "rxjs-tslint-rules"
+    ],
+    "rules": {
+        "indent": [
+            true,
+            "spaces",
+            4
+        ],
+        "member-ordering": [
+            true,
+            {
+                "order": [
+                    "static-field",
+                    "instance-field",
+                    "static-method",
+                    "instance-method"
+                ]
+            }
+        ],
+        "encoding": true,
+        "import-spacing": true,
+        "deprecation": {
+            "severity": "warning"
+        },
+        "no-mergeable-namespace": true,
+        "no-null-undefined-union": true,
+        "no-promise-as-boolean": true,
+        "no-restricted-globals": true,
+        "no-tautology-expression": true,
+        "prefer-conditional-expression": true,
+        "one-line": [
+            true,
+            "check-open-brace",
+            "check-catch",
+            "check-else",
+            "check-whitespace"
+        ],
+        "static-this": true,
+        "strict-string-expressions": true,
+        "unnecessary-else": true,
+        "no-forward-ref": true,
+        "no-host-metadata-property": true,
+        "template-no-negated-async": true,
+        "strict-comparisons": true,
+        "directive-selector": [
+            true,
+            "attribute",
+            "camelCase"
+        ],
+        "component-selector": [
+            true,
+            "element",
+            "kebab-case"
+        ],
+        "component-max-inline-declarations": true,
+        "contextual-lifecycle": true,
+        "no-conflicting-lifecycle": true,
+        "no-inputs-metadata-property": true,
+        "no-output-native": true,
+        "no-outputs-metadata-property": true,
+        "no-queries-metadata-property": true,
+        "template-banana-in-box": true,
+        "no-input-rename": true,
+        "no-output-rename": true,
+        "use-lifecycle-interface": true,
+        "use-pipe-transform-interface": true,
+        "rxjs-no-connectable": true,
+        "rxjs-no-create": true,
+        "rxjs-no-exposed-subjects": true,
+        "rxjs-no-ignored-replay-buffer": true,
+        //    "rxjs-prefer-angular-async-pipe": true,
+        "rxjs-no-unsafe-takeuntil": {
+            "options": [
+                {
+                    "allow": [
+                        "count",
+                        "defaultIfEmpty",
+                        "endWith",
+                        "every",
+                        "finalize",
+                        "finally",
+                        "isEmpty",
+                        "last",
+                        "max",
+                        "min",
+                        "publish",
+                        "publishBehavior",
+                        "publishLast",
+                        "publishReplay",
+                        "reduce",
+                        "share",
+                        "shareReplay",
+                        "skipLast",
+                        "takeLast",
+                        "throwIfEmpty",
+                        "toArray"
+                    ]
+                }
+            ]
+        },
+        "rxjs-no-unsafe-switchmap": {
+            "options": [
+                {
+                    "disallow": [
+                        "delete",
+                        "remove"
+                    ],
+                    "observable": "action(s|\\$)?"
+                }
+            ]
+        },
+        "rxjs-no-unsafe-catch": true,
+        "rxjs-no-unsafe-first": true,
+        "rxjs-no-index": true,
+        "rxjs-no-subject-unsubscribe": true,
+        "rxjs-no-async-subscribe": true,
+        "rxjs-no-redundant-notify": true,
+        "rxjs-prefer-observer": true,
+        "rxjs-no-nested-subscribe": true,
+        "rxjs-no-unbound-methods": true,
+        "rxjs-no-subject-value": true,
+        "rxjs-no-subclass": true,
+        "rxjs-no-internal": true,
+        "rxjs-no-ignored-notifier": true,
+        "rxjs-no-unsafe-subject-next": true
+    }
+}
