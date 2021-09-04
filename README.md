@@ -5,4 +5,4 @@ UI KIT
 
 ## NPM Install 
 
-Run `npm install fox-box-ui`
+Run `npm install @fo-ox/fox-box-ui`
