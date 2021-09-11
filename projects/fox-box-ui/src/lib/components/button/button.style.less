@@ -1,1 +1,35 @@
 @import "../../styles/core";
+
+:host {
+  .browserStylesClearing;
+  cursor: pointer;
+  border-radius: @border;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: @orange-6;
+  padding: 0 @space-XL;
+  min-height: @space-MAX;
+  color: @white;
+
+  &._secondary {
+    background: @gray-2;
+    color: @gray-10;
+  }
+
+  &._link {
+    background: none;
+    color: @orange-6;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &._outline {
+    background: none;
+    border: 1px solid @orange-6;
+    color: @orange-6;
+  }
+}
+
