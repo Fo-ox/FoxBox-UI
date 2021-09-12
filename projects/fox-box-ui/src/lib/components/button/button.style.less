@@ -7,19 +7,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: @orange-6;
+  background: @sukuna;
   padding: 0 @space-XL;
   min-height: @space-MAX;
   color: @white;
+  transition: all @transition;
+  font-family: @default-font-family;
+
+  &:hover {
+    background: fade(@sukuna, 85%);
+  }
+
+  &:active {
+    background: darken(@sukuna, 10%);
+  }
 
   &._secondary {
-    background: @gray-2;
-    color: @gray-10;
+    background: @megumi;
+    color: @sukuna;
   }
 
   &._link {
     background: none;
-    color: @orange-6;
+    color: @sukuna;
 
     &:hover {
       text-decoration: underline;
@@ -28,8 +38,8 @@
 
   &._outline {
     background: none;
-    border: 1px solid @orange-6;
-    color: @orange-6;
+    border: 1px solid @megumi;
+    color: @sukuna;
   }
 }
 
