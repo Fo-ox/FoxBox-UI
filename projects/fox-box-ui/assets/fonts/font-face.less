@@ -1,0 +1,30 @@
+.font-faces(@font-family, @file-name, @local-name, @font-weight, @font-style) {
+  @font-face {
+    font-family: @font-family;
+    src: url('source/@{file-name}.eot');
+    src: local('@{local-name}'), local('@{file-name}'),
+    url('source/@{file-name}.eot?#iefix') format('embedded-opentype'),
+    url('source/@{file-name}.woff') format('woff'),
+    url('source/@{file-name}.ttf') format('truetype');
+    font-weight: @font-weight;
+    font-style: @font-style;
+    font-display: fallback;
+  }
+}
+
+.font-faces(IBM, 'IBMPlexSans-ThinItalic', 'IBM Plex Sans Thin Italic', 100, italic);
+.font-faces(IBM, 'IBMPlexSans-ExtraLightItalic', 'IBM Plex Sans ExtraLight Italic', 200, italic);
+.font-faces(IBM, 'IBMPlexSans-LightItalic', 'IBM Plex Sans Light Italic', 300, italic);
+.font-faces(IBM, 'IBMPlexSans-Italic', 'IBM Plex Sans Medium Italic', 400, italic);
+.font-faces(IBM, 'IBMPlexSans-MediumItalic', 'IBM Plex Sans Light Italic', 500, italic);
+.font-faces(IBM, 'IBMPlexSans-SemiBoldItalic', 'IBM Plex Sans SemiBold Italic', 600, italic);
+.font-faces(IBM, 'IBMPlexSans-BoldItalic', 'IBM Plex Sans Bold Italic', 700, italic);
+
+.font-faces(IBM, 'IBMPlexSans-Thin', 'IBM Plex Sans Thin', 100, normal);
+.font-faces(IBM, 'IBMPlexSans-ExtraLight', 'IBM Plex Sans ExtraLight', 200, normal);
+.font-faces(IBM, 'IBMPlexSans-Light', 'IBM Plex Sans Light', 300, normal);
+.font-faces(IBM, 'IBMPlexSans', 'IBM Plex Sans', 400, normal);
+.font-faces(IBM, 'IBMPlexSans-Medium', 'IBM Plex Sans Medium', 500, normal);
+.font-faces(IBM, 'IBMPlexSans-SemiBold', 'IBM Plex Sans SemiBold', 600, normal);
+.font-faces(IBM, 'IBMPlexSans-Bold', 'IBM Plex Sans Bold', 700, normal);
+

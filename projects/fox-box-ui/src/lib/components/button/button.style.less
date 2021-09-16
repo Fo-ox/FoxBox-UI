@@ -1,4 +1,4 @@
-@import "../../styles/core";
+@import "../../../../assets/styles/core";
 
 :host {
   .browserStylesClearing;
@@ -7,29 +7,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: @sukuna;
+  background: @primary;
   padding: 0 @space-XL;
   min-height: @space-MAX;
   color: @white;
   transition: all @transition;
-  font-family: @default-font-family;
+  .font-13-regular;
 
   &:hover {
-    background: fade(@sukuna, 85%);
+    background: fade(@primary, 85%);
   }
 
   &:active {
-    background: darken(@sukuna, 10%);
+    background: darken(@primary, 10%);
   }
 
   &._secondary {
-    background: @megumi;
-    color: @sukuna;
+    background: @secondary;
+    color: @primary;
   }
 
   &._link {
     background: none;
-    color: @sukuna;
+    color: @primary;
 
     &:hover {
       text-decoration: underline;
@@ -38,8 +38,8 @@
 
   &._outline {
     background: none;
-    border: 1px solid @megumi;
-    color: @sukuna;
+    border: 1px solid @secondary;
+    color: @primary;
   }
 }
 

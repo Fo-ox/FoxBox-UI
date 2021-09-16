@@ -1,20 +1,12 @@
-@default-font-family: Inter, sans-serif;
+@default-font-family: IBM, sans-serif;
 @default-font-size: 13px;
 @default-line-height: 20px;
 @default-letter-spacing: -0.0025em;
 @default-font-weight: 400;
 @default-font-style: normal;
-@default-font-feature-settings: 'cv10' on,'cv03' on,'cv04' on,'cv05' on,'cv09' on;
 
 @medium-font-weight: 500;
 @semibold-font-weight: 600;
-@black-font-weight: 900;
-
-.font-feature-settings(@font-feature-settings: @default-font-feature-settings) {
-  font-feature-settings: @font-feature-settings;
-  -moz-font-feature-settings: @font-feature-settings;
-  -webkit-font-feature-settings: @font-feature-settings;
-}
 
 .font-construct(
   @font-size: @default-font-size,
@@ -22,15 +14,13 @@
   @letter-spacing: @default-letter-spacing,
   @font-weight: @default-font-weight,
   @font-style: @default-font-style,
-  @font-family: @default-font-family,
-  @font-feature-settings: @default-font-feature-settings) {
-    font-family: @font-family;
-    font-size: @font-size;
-    font-style: @font-style;
-    font-weight: @font-weight;
-    line-height: @line-height;
-    letter-spacing: @letter-spacing;
-    .font-feature-settings(@font-feature-settings);
+  @font-family: @default-font-family) {
+  font-family: @font-family;
+  font-size: @font-size;
+  font-style: @font-style;
+  font-weight: @font-weight;
+  line-height: @line-height;
+  letter-spacing: @letter-spacing;
 }
 
 .font-11-regular() {
@@ -112,11 +102,6 @@
 .font-24-semibold() {
   .font-24-regular;
   font-weight: @semibold-font-weight;
-}
-
-.font-24-black() {
-  .font-24-regular;
-  font-weight: @black-font-weight;
 }
 
 .font-32-regular() {
