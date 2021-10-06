@@ -1,11 +1,44 @@
-import {ChangeDetectionStrategy, Component} from "@angular/core";
+import {
+    ChangeDetectionStrategy,
+    Component,
+    EventEmitter,
+    HostBinding,
+    HostListener,
+    Input,
+    Output
+} from "@angular/core";
+import {ElementState} from "../../models/models";
 
 @Component({
     selector: 'button[fox-button], a[fox-button]',
-    templateUrl: 'button.template.html',
-    styleUrls: ['button.style.less'],
+    templateUrl: 'button.component.html',
+    styleUrls: ['button.component.less'],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FoxButtonComponent {
+    /** @internal */
+    public _state: ElementState = { loading: false, disable: false };
 
+    @Input() set loading(loading: boolean) {
+        this._state = {...this._state, loading: loading}
+    };
+
+    @Input() set disable(disable: boolean) {
+        this._state = {...this._state, disable: disable}
+    };
+
+    @Output() onClick: EventEmitter<ElementState> = new EventEmitter();
+    @Output() onSubmit: EventEmitter<void> = new EventEmitter();
+
+    @HostBinding('class._disable')
+    get getDisable(): boolean {
+        return this._state.disable;
+    }
+
+    @HostListener('tap')
+    @HostListener('click')
+    click(): void {
+        this.onClick.emit(this._state)
+        !this._state.disable && !this._state.loading && this.onSubmit.emit();
+    }
 }

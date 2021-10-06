@@ -28,12 +28,7 @@
             "inlineStyleLanguage": "less",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              {
-                "glob": "**/*",
-                "input": "./node_modules/fox-box-ui/assets",
-                "output": "./assets/"
-              }
+              "src/assets"
             ],
             "styles": [
               "src/styles.less"

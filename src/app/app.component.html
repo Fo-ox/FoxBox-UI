@@ -1,13 +1,13 @@
 <div>HOST:</div>
 <div class="main">
-    <button fox-button>primary</button>
-    <button class="_secondary" fox-button>100.41235679 $</button>
+    <button fox-button [loading]="dis" (onClick)="click($event)" (onSubmit)="submit()">primary</button>
+    <button class="_secondary" fox-button><div>100.41235679 $</div></button>
     <a class="_link" fox-button href="https://google.com">link</a>
     <a class="_outline" fox-button href="https://google.com">outline</a>
 </div>
 <div class="main">
-    <button class="some" fox-button>primary</button>
+    <button class="some" fox-button (click)="dis = !dis">primary</button>
     <button class="some _secondary" fox-button>secondary</button>
-    <a class="_link some" fox-button href="https://google.com">link</a>
+    <a class="_link some" fox-button href="https://google.com" [loading]="true">link</a>
     <a class="some _outline" fox-button href="https://google.com">outline</a>
 </div>
