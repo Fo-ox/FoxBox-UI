@@ -1,3 +1,5 @@
+@import './variables';
+
 .browserStylesClearing {
   border: none;
   background: none;
@@ -8,4 +10,32 @@
   text-decoration: none;
   color: black;
   cursor: default;
+}
+
+.absolute {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.state-style-constructor(@key, @default, @hover, @active, @disable) {
+  @{key}: @default;
+
+  &:hover {
+      @{key}: @hover;
+  }
+
+  &:active {
+      @{key}: @active;
+  }
+
+  &._disable {
+      @{key}: @disable;
+  }
+}
+
+.transition-by-state {
+  .state-style-constructor(transition, all @transition, all @transition, all @transition, all @transition);
 }

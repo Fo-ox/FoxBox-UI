@@ -1,5 +1,9 @@
 <span class="container">
-    <fox-loader class="loader" *ngIf="_state.loading"></fox-loader>
+    <fox-loader class="loader"
+                [show]="_state.loading"
+                [color]="loaderColor"
+                [type]="loaderType"
+    ></fox-loader>
     <span [class._hidden]="_state.loading">
         <ng-content></ng-content>
     </span>

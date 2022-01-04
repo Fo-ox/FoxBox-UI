@@ -7,7 +7,7 @@ import {
     Input,
     Output
 } from "@angular/core";
-import {ElementState} from "../../models/models";
+import { FoxElementState, FoxLoaderTypes } from "../../models/models";
 
 @Component({
     selector: 'button[fox-button], a[fox-button]',
@@ -17,7 +17,7 @@ import {ElementState} from "../../models/models";
 })
 export class FoxButtonComponent {
     /** @internal */
-    public _state: ElementState = { loading: false, disable: false };
+    public _state: FoxElementState = { loading: false, disable: false };
 
     @Input() set loading(loading: boolean) {
         this._state = {...this._state, loading: loading}
@@ -27,7 +27,10 @@ export class FoxButtonComponent {
         this._state = {...this._state, disable: disable}
     };
 
-    @Output() onClick: EventEmitter<ElementState> = new EventEmitter();
+    @Input() loaderType: FoxLoaderTypes;
+    @Input() loaderColor: string;
+
+    @Output() onClick: EventEmitter<FoxElementState> = new EventEmitter();
     @Output() onSubmit: EventEmitter<void> = new EventEmitter();
 
     @HostBinding('class._disable')

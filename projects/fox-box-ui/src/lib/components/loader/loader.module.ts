@@ -14,4 +14,4 @@ import { LoaderComponent } from './loader.component';
         LoaderComponent
     ],
 })
-export class LoaderModule { }
+export class FoxLoaderModule { }

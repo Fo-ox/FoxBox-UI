@@ -7,49 +7,74 @@
   justify-content: center;
   padding: 0 @space-XL;
   min-height: @space-MAX;
-  border-radius: @border;
-  background: @space-fox;
-  color: @white;
-  text-decoration: none;
+  border-radius: @border-radius;
   cursor: pointer;
-  transition: all @transition;
+
   .font-13-regular;
-
-  &:hover {
-    background: @space-fox-dark;
-    transition: all @transition;
-  }
-
-  &:active {
-    background: @space-fox-darken;
-    transition: all @transition;
-  }
-
-  &._disable {
-    cursor: default;
-    background: @space-fox-light;
-    color: @secondary;
-  }
+  .transition-by-state;
+  .state-style-constructor(
+    background-color,
+    @c-primary-button,
+    @c-primary-button_hover,
+    @c-primary-button_active,
+    @c-primary-button_disable
+  );
+  .state-style-constructor(
+    color,
+    @c-primary-button-text,
+    @c-primary-button-text,
+    @c-primary-button-text,
+    @c-primary-button-text_disable
+  );
 
   &._secondary {
-    background: @secondary;
-    color: @space-fox;
+    .state-style-constructor(
+      background-color,
+      @c-secondary-button,
+      @c-secondary-button_hover,
+      @c-secondary-button_active,
+      @c-secondary-button_disable
+    );
+    .state-style-constructor(
+      color,
+      @c-secondary-button-text,
+      @c-secondary-button-text,
+      @c-secondary-button-text,
+      @c-secondary-button-text_disable
+    );
   }
 
   &._link {
     background: none;
-    color: @space-fox;
-
-    &:hover {
-      text-decoration: underline;
-      transition: all @transition;
-    }
+    .state-style-constructor(
+      color,
+      @c-link-text,
+      @c-link-text_hover,
+      @c-link-text_active,
+      @c-link-text_disable
+    );
   }
 
   &._outline {
     background: none;
-    border: 1px solid @secondary;
-    color: @space-fox;
+    .state-style-constructor(
+      border,
+      1px solid @c-outline-button,
+      1px solid @c-outline-button_hover,
+      1px solid @c-outline-button_active,
+      1px solid @c-outline-button_disable
+    );
+    .state-style-constructor(
+      color,
+      @c-outline-text,
+      @c-outline-text_hover,
+      @c-outline-text_active,
+      @c-outline-text_disable
+    );
+  }
+
+  &._disable {
+    cursor: default;
   }
 }
 
@@ -65,8 +90,5 @@
 }
 
 .loader {
-  position: absolute;
-  top: 0;
-  left: 0;
+  .absolute;
 }
-
