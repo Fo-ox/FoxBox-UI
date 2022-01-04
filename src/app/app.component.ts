@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
     title = 'FoxBox-UI';
+    public dis: boolean = true;
+
+    click(event: any): void {
+        console.log(event);
+    }
+
+    submit() {
+        console.log('submit');
+    }
 }

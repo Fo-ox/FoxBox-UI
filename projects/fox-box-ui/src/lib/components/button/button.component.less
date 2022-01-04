@@ -1,0 +1,94 @@
+@import "../../../../assets/styles/core";
+
+:host {
+  .browserStylesClearing;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 @space-XL;
+  min-height: @space-MAX;
+  border-radius: @border-radius;
+  cursor: pointer;
+
+  .font-13-regular;
+  .transition-by-state;
+  .state-style-constructor(
+    background-color,
+    @c-primary-button,
+    @c-primary-button_hover,
+    @c-primary-button_active,
+    @c-primary-button_disable
+  );
+  .state-style-constructor(
+    color,
+    @c-primary-button-text,
+    @c-primary-button-text,
+    @c-primary-button-text,
+    @c-primary-button-text_disable
+  );
+
+  &._secondary {
+    .state-style-constructor(
+      background-color,
+      @c-secondary-button,
+      @c-secondary-button_hover,
+      @c-secondary-button_active,
+      @c-secondary-button_disable
+    );
+    .state-style-constructor(
+      color,
+      @c-secondary-button-text,
+      @c-secondary-button-text,
+      @c-secondary-button-text,
+      @c-secondary-button-text_disable
+    );
+  }
+
+  &._link {
+    background: none;
+    .state-style-constructor(
+      color,
+      @c-link-text,
+      @c-link-text_hover,
+      @c-link-text_active,
+      @c-link-text_disable
+    );
+  }
+
+  &._outline {
+    background: none;
+    .state-style-constructor(
+      border,
+      1px solid @c-outline-button,
+      1px solid @c-outline-button_hover,
+      1px solid @c-outline-button_active,
+      1px solid @c-outline-button_disable
+    );
+    .state-style-constructor(
+      color,
+      @c-outline-text,
+      @c-outline-text_hover,
+      @c-outline-text_active,
+      @c-outline-text_disable
+    );
+  }
+
+  &._disable {
+    cursor: default;
+  }
+}
+
+._hidden {
+  opacity: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.loader {
+  .absolute;
+}
