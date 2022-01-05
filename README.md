@@ -17,7 +17,7 @@ add `@import "~node_modules/fox-box-ui/assets/fonts/font-face";` in your root st
 ## Components:
 ### 🟣 [FoxButton]
 
-  Use `fox-button` selector on <button> or <a> tags.
+  Use `fox-button` selector on `<button>` or `<a>` tags.
   
   #### Style:
   
